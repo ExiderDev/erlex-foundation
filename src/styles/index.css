@@ -1,0 +1,286 @@
+/* ==========================================================================
+   Erlex Foundation — Design Tokens
+   Concept: "Peta Sinyal" — the archipelago as a network. Nodes represent
+   communities; lines represent the connectivity Erlex builds between them.
+   Primary color #183A4A — a deep sea-teal night-ocean, paired with a
+   signal-teal as the human warmth of connection.
+   ========================================================================== */
+
+:root {
+  /* Color: night ocean (rebased on #183A4A) */
+  --navy-950: #183a4a;
+  --navy-900: #1d4a5e;
+  --navy-800: #245d73;
+  --navy-700: #2c718b;
+  --navy-line: rgba(94, 234, 212, 0.16);
+
+  /* Color: signal teal */
+  --teal-300: #7fe9d9;
+  --teal-400: #3ecfba;
+  --teal-500: #22a99a;
+
+  /* Color: ivory surfaces */
+  --ivory-50: #f8f7f3;
+  --ivory-100: #efede5;
+  --ivory-200: #e2ded2;
+
+  /* Color: ink */
+  --ink-900: #101a2c;
+  --ink-700: #364258;
+  --ink-500: #5c6a80;
+  --ink-on-dark: #d8ddea;
+  --ink-on-dark-dim: #8b96ac;
+
+  /* Type */
+  --font-display: 'Sora', 'Segoe UI', sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Scale */
+  --step-1: clamp(0.8rem, 0.77rem + 0.15vw, 0.9rem);
+  --step0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step1: clamp(1.25rem, 1.18rem + 0.35vw, 1.5rem);
+  --step2: clamp(1.6rem, 1.47rem + 0.65vw, 2.05rem);
+  --step3: clamp(2.1rem, 1.85rem + 1.25vw, 2.9rem);
+  --step4: clamp(2.7rem, 2.2rem + 2.4vw, 4.2rem);
+  --step-statement: clamp(2.4rem, 5.5vw, 4.2rem);
+  --step-display: clamp(2.9rem, 10.5vw, 7.5rem);
+
+  /* Layout */
+  --container-w: 1180px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-padding-top: 88px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink-900);
+  background: var(--ivory-50);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: inherit;
+}
+
+h2 {
+  letter-spacing: -0.02em;
+  line-height: 0.96;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal-400);
+  outline-offset: 3px;
+}
+
+/* ---------- shared layout utilities ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: clamp(64px, 9vw, 120px) 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: var(--step-1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal-500);
+}
+
+.eyebrow::before {
+  content: none;
+}
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: clamp(32px, 5vw, 56px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section-head h2 {
+  font-size: var(--step-statement);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.98;
+}
+
+.section-head p {
+  font-size: var(--step0);
+  color: var(--ink-500);
+  line-height: 1.6;
+}
+
+.section-head--center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
+}
+
+/* ---------- buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--step-1);
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out),
+    background 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--teal-400), var(--teal-500));
+  color: var(--navy-950);
+  box-shadow: 0 10px 24px -10px rgba(34, 169, 154, 0.6);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 14px 30px -10px rgba(34, 169, 154, 0.75);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--navy-700);
+  color: var(--navy-900);
+}
+
+.btn-outline:hover {
+  border-color: var(--teal-500);
+  color: var(--teal-500);
+}
+
+/* ---------- scroll reveal ---------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Lenis smooth scroll ---------- */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ---------- custom scrollbar ---------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ivory-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy-800);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navy-700);
+}
+
+/* ---------- reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

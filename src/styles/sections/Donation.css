@@ -1,0 +1,218 @@
+.donation {
+  background: transparent;
+  color: var(--ink-900);
+}
+
+.donation__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: clamp(32px, 6vw, 70px);
+  align-items: start;
+}
+
+.donation__copy h2 {
+  margin-top: 16px;
+  font-size: var(--step-statement);
+  font-weight: 800;
+  line-height: 0.98;
+  color: var(--ink-900);
+  max-width: 15ch;
+}
+
+.donation__copy p {
+  margin-top: 18px;
+  max-width: 42ch;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-700);
+}
+
+.donation__trust {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.donation__trust li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--ink-700);
+}
+
+.donation__trust svg {
+  color: var(--teal-500);
+  flex-shrink: 0;
+}
+
+.donation__card {
+  background: #fff;
+  border: 1px solid var(--ivory-200);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 34px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 48px -30px rgba(24, 58, 74, 0.3);
+}
+
+.donation__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+  margin-bottom: 12px;
+}
+
+.donation__presets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.donation__preset {
+  padding: 13px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--ivory-200);
+  background: transparent;
+  color: var(--ink-700);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.donation__preset.is-active,
+.donation__preset:hover {
+  border-color: var(--teal-500);
+  color: var(--teal-500);
+}
+
+.donation__preset.is-active {
+  background: rgba(34, 169, 154, 0.08);
+}
+
+.donation__custom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--ivory-200);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 22px;
+  font-family: var(--font-mono);
+  color: var(--ink-500);
+}
+
+.donation__custom input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--ink-900);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.donation__custom input:focus {
+  outline: none;
+}
+
+.donation__methods {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.donation__method {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--ivory-200);
+  background: transparent;
+  color: var(--ink-500);
+  font-size: 0.86rem;
+  font-weight: 500;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.donation__method.is-active {
+  border-color: var(--navy-800);
+  color: var(--navy-900);
+}
+
+.donation__submit {
+  width: 100%;
+}
+
+.donation__instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.donation__instructions-amount {
+  font-family: var(--font-display);
+  font-size: var(--step2);
+  font-weight: 800;
+  color: var(--navy-900);
+}
+
+.donation__bank {
+  background: var(--ivory-100);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.donation__bank p {
+  font-size: 0.9rem;
+  color: var(--ink-700);
+}
+
+.donation__bank-number {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--ink-900);
+  margin: 6px 0;
+}
+
+.donation__qris-box {
+  height: 160px;
+  border: 1px dashed rgba(24, 58, 74, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-500);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.donation__placeholder-note {
+  font-size: 0.72rem;
+  color: var(--ink-500);
+  margin-top: 8px;
+}
+
+.donation__back {
+  align-self: center;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .donation__grid {
+    grid-template-columns: 1fr;
+  }
+  .donation__copy h2 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .donation__presets {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,32 @@
+.text-reveal {
+  position: relative;
+  display: inline-block;
+}
+
+.text-reveal__layer {
+  position: absolute;
+  inset: 0;
+  display: block;
+  white-space: normal;
+}
+
+.text-reveal__base {
+  position: relative;
+  color: rgba(24, 58, 74, 0.16);
+}
+
+.text-reveal__reveal,
+.text-reveal__flash {
+  will-change: clip-path;
+}
+
+.text-reveal__reveal {
+  color: var(--ink-900);
+}
+
+.text-reveal__flash {
+  background: linear-gradient(90deg, var(--teal-500), var(--navy-800));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

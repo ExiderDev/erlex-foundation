@@ -1,0 +1,9 @@
+/* Site shell: content stacks above the fixed signal backdrop */
+.site {
+  position: relative;
+  z-index: 1;
+}
+
+.site section {
+  position: relative;
+}
