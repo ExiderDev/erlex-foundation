@@ -11,17 +11,17 @@ const PILLARS = [
   {
     icon: Signal,
     title: 'Aksesibilitas',
-    body: 'Menyalurkan tas, laptop, dan alat sekolah ke sekolah serta kampus yang selama ini berada di luar peta jangkauan bantuan.',
+    body: 'Menyalurkan tas, alat sekolah, dan kebutuhan belajar ke sekolah serta kampus yang selama ini berada di luar peta jangkauan bantuan.',
   },
   {
     icon: GraduationCap,
-    title: 'Kapasitas',
-    body: 'Literasi digital dan pelatihan teknis yang disusun bersama komunitas, bukan sekadar dibagikan lalu ditinggalkan.',
+    title: 'Ketepatan',
+    body: 'Bantuan disusun bersama komunitas dan sekolah setempat agar benar-benar sesuai kebutuhan — bukan sekadar dibagikan lalu ditinggalkan.',
   },
   {
     icon: Users,
     title: 'Keberlanjutan',
-    body: 'Melatih fasilitator lokal agar setiap program tetap hidup dan bertumbuh jauh setelah tim kami pulang.',
+    body: 'Setiap bantuan diupayakan sampai ke tangan yang tepat, dan semangat berbagi terus hidup jauh setelah tim kami pulang.',
   },
 ]
 
@@ -41,20 +41,20 @@ export default function About() {
       <div className="container">
         <p className="eyebrow about__eyebrow">Tentang</p>
         <h2 className="about__statement">
-          <TextReveal text="Teknologi seharusnya menjangkau semua orang — bukan hanya yang sudah terhubung." />
+          <TextReveal text="Bantuan seharusnya menjangkau semua orang — bukan hanya mereka yang mudah dijangkau." />
         </h2>
 
         <div className="about__text">
           <p>
-            Erlex Foundation adalah yayasan sosial yang dibentuk di bawah{' '}
-            <strong>PT Filosi Exider Inovasi</strong>. Kami menyalurkan keahlian
-            teknis perusahaan ke bentuk yang paling dibutuhkan komunitas di
-            wilayah 3T (Tertinggal, Terdepan, Terluar): bantuan, literasi, dan
-            peluang di dunia digital.
+            Erlex Foundation adalah yayasan sosial yang lahir dari niat untuk
+            berbagi — didirikan di bawah{' '}
+            <strong>PT Filosi Exider Inovasi</strong>. Kami menyalurkan tas, alat
+            sekolah, laptop, dan beasiswa bagi komunitas di wilayah 3T
+            (Tertinggal, Terdepan, Terluar) yang membutuhkan.
           </p>
           <p>
-            Kami percaya kesenjangan digital bukan hanya soal perangkat —
-            tapi juga soal siapa yang tahu cara memakainya untuk berkembang.
+            Kami percaya setiap anak berhak bersekolah dengan bahagia — dan tidak
+            ada orang yang terlalu jauh untuk diperhatikan.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function About() {
         </div>
 
         <div ref={partnersRef} className="reveal about__partners">
-          <h2 className="about__partners-label">Our Partner</h2>
+          <h2 className="about__partners-label">Mitra Kami</h2>
           <ul className="about__partners-list">
             {PARTNERS.map(({ name, img }) => (
               <li key={name} className="about__partners-item">

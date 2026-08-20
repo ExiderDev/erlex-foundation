@@ -43,8 +43,8 @@ export default function Donation() {
           <div className="donation__copy">
             <h2>Setiap kontribusi akan sangat bernilai.</h2>
             <p>
-              Donasi Anda disalurkan langsung ke program bantuan tas & laptop,
-              literasi digital, dan beasiswa di wilayah 3T.
+              Donasi Anda disalurkan langsung ke program bantuan dan beasiswa
+              bagi komunitas di wilayah 3T.
             </p>
 
             <ul className="donation__trust">

@@ -10,7 +10,7 @@ const FOUNDER = {
   role: 'Founder & CEO — PT Filosi Exider Inovasi',
   bio: [
     'Semuanya berawal pada 2020, saat saya masih duduk di bangku kuliah dan mulai membantu teman-teman mahasiswa yang kesulitan dengan perangkat mereka. Saya tidak pernah menyangka uluran tangan sederhana itu menjadi cikal bakal Filosi. Semangat menolong itu terus tumbuh: pada 2021 kami membentuk tim dan membuka toko fisik Sherfis Tech Computer, sehingga makin banyak orang yang bisa kami layani. Pada 2022 kami mengikuti pelatihan eksternal agar bantuan yang kami berikan semakin baik.',
-    'Tahun 2024 menjadi babak baru: kami melakukan rebranding menjadi PT Filosi Exider Inovasi, menegaskan komitmen untuk terus melayani dan membantu. Ekspansi ke pusat kota pada 2025 memperluas jangkauan layanan, hingga kini kami terus berkembang bersama Erlex Foundation — menyalurkan bantuan dan edukasi agar semangat saling membantu menjangkau seluruh Indonesia.',
+    'Tahun 2024 menjadi babak baru: kami melakukan rebranding menjadi PT Filosi Exider Inovasi, menegaskan komitmen untuk terus melayani dan membantu. Ekspansi ke pusat kota pada 2025 memperluas jangkauan layanan, hingga kini kami terus berkembang bersama Erlex Foundation, menyalurkan bantuan dan semangat saling membantu ke seluruh Indonesia.',
   ],
   quote:
     'Saya memulainya dari satu uluran tangan di bangku kuliah. Dan kami tidak akan berhenti selama masih ada orang yang membutuhkan.',
@@ -42,7 +42,7 @@ export default function Founder() {
           </motion.p>
 
           <motion.h2 variants={item} className="founder__heading">
-            <TextReveal text="Sinyal berangkat dari satu orang yang percaya lebih dulu." />
+            <TextReveal text="Berawal dari satu uluran tangan." />
           </motion.h2>
 
           <motion.div variants={item} className="founder__identity">

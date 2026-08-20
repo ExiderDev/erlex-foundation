@@ -1,33 +1,37 @@
 import { useRef } from 'react'
 import { motion, useMotionTemplate, useScroll, useTransform } from 'motion/react'
 import { MapPin } from 'lucide-react'
-import galleryImage from '../assets/image.webp'
+import galleryA from '../assets/gambar/gambar.webp'
+import galleryB from '../assets/gambar/gambar3.webp'
+import galleryC from '../assets/gambar/gambar4.webp'
+import galleryD from '../assets/gambar/gambar6.webp'
+import galleryCenter from '../assets/image.webp'
 import '../styles/sections/Gallery.css'
 
 const IMAGES = [
   {
-    src: galleryImage,
+    src: galleryA,
     alt: 'Dokumentasi kegiatan Erlex Foundation',
     start: -200,
     end: 200,
     className: 'gallery-img--a',
   },
   {
-    src: galleryImage,
+    src: galleryB,
     alt: 'Dokumentasi kegiatan Erlex Foundation',
     start: 200,
     end: -250,
     className: 'gallery-img--b',
   },
   {
-    src: galleryImage,
+    src: galleryC,
     alt: 'Dokumentasi kegiatan Erlex Foundation',
     start: -200,
     end: 200,
     className: 'gallery-img--c',
   },
   {
-    src: galleryImage,
+    src: galleryD,
     alt: 'Dokumentasi kegiatan Erlex Foundation',
     start: 0,
     end: -500,
@@ -36,12 +40,12 @@ const IMAGES = [
 ]
 
 const ITEMS = [
-  'Kelas Literasi Digital — Desa Oesao',
-  'Penyerahan Beasiswa Teknologi',
+  'Penyerahan Bantuan di Desa Oesao',
+  'Penyerahan Beasiswa Pendidikan',
   'Penyerahan Tas & Laptop di Sekolah',
   'Penyerahan Alat Sekolah di Desa',
-  'Kunjungan Lapangan Fasilitator Lokal',
-  'Sesi Evaluasi Bersama Komunitas',
+  'Penyerahan Bantuan di Sekolah',
+  'Penyaluran Bantuan Bersama Komunitas',
 ]
 
 export default function Gallery() {
@@ -85,7 +89,7 @@ const CenterImage = ({ heroRef }) => {
         clipPath,
         backgroundSize,
         opacity,
-        backgroundImage: `url(${galleryImage})`,
+        backgroundImage: `url(${galleryCenter})`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       }}

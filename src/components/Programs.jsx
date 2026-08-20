@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
-import { Award, Backpack, Laptop } from 'lucide-react'
+import { Award, Backpack, BookOpen, GraduationCap, Laptop } from 'lucide-react'
 import '../styles/sections/Programs.css'
 
 const PROGRAMS = [
@@ -21,6 +21,18 @@ const PROGRAMS = [
     title: 'Bantuan Laptop',
     body: 'Menyalurkan laptop bagi pelajar dan mahasiswa di sekolah serta kampus untuk mendukung proses belajar.',
     reach: 'Disalurkan ke 20+ sekolah & kampus',
+  },
+  {
+    icon: BookOpen,
+    title: 'Bantuan Buku & Seragam',
+    body: 'Menyalurkan buku pelajaran dan seragam sekolah bagi pelajar yang membutuhkan.',
+    reach: 'Disalurkan ke 30+ sekolah',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Bantuan Peralatan Kampus',
+    body: 'Menyalurkan peralatan kampus bagi mahasiswa untuk menunjang kelancaran perkuliahan.',
+    reach: 'Disalurkan ke 10+ kampus',
   },
 ]
 
@@ -65,8 +77,8 @@ export default function Programs() {
           <p className="eyebrow">Program</p>
           <h2>Tiga jalur, satu tujuan yang sama.</h2>
           <p>
-            Setiap program dirancang untuk saling menopang — dari perlengkapan
-            ke keterampilan, hingga peluang jangka panjang.
+            Setiap program dirancang untuk saling menopang — dari kebutuhan
+            mendasar hingga peluang jangka panjang.
           </p>
         </div>
 
