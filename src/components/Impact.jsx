@@ -109,9 +109,6 @@ export default function Impact() {
             </div>
           ))}
         </div>
-        <p className="container impact__note">
-          *Data ilustratif untuk keperluan tampilan, akan diperbarui dengan data aktual.
-        </p>
       </motion.div>
     </section>
   )

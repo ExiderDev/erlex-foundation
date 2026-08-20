@@ -1,6 +1,8 @@
 .text-reveal {
   position: relative;
   display: inline-block;
+  padding-bottom: 0.2em;
+  margin-bottom: -0.2em;
 }
 
 .text-reveal__layer {
@@ -25,7 +27,7 @@
 }
 
 .text-reveal__flash {
-  background: linear-gradient(90deg, var(--teal-500), var(--navy-800));
+  background: linear-gradient(90deg, var(--teal-500), var(--navy-900));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

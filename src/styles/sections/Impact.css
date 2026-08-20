@@ -152,12 +152,6 @@
   color: var(--ink-500);
 }
 
-.impact__note {
-  margin-top: 22px;
-  font-size: 0.72rem;
-  color: var(--ink-500);
-}
-
 @media (max-width: 900px) {
   .impact__stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));

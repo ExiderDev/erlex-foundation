@@ -105,11 +105,3 @@
   font-weight: 700;
   color: var(--teal-500);
 }
-
-.hero-content__note {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 0.72rem;
-  color: var(--ink-500);
-  opacity: 0.75;
-}

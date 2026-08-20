@@ -66,7 +66,7 @@
 .founder__heading {
   font-size: var(--step-statement);
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 0.98;
   max-width: 22ch;
 }
 

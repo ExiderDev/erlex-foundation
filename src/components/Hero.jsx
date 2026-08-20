@@ -91,7 +91,6 @@ const HeroContent = () => {
             </div>
           ))}
         </dl>
-        <p className="hero-content__note">*Data ilustratif, akan diperbarui berkala.</p>
       </div>
     </div>
   )
