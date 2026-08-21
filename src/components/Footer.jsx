@@ -1,3 +1,4 @@
+import logoMaskot from '../assets/logo/LogoMaskotBiru.webp'
 import '../styles/layout/Footer.css'
 
 const YEAR = new Date().getFullYear()
@@ -8,12 +9,7 @@ export default function Footer() {
       <div className="container footer__inner">
         <div className="footer__brand">
           <span className="footer__mark" aria-hidden="true">
-            <svg viewBox="0 0 28 28" width="24" height="24">
-              <circle cx="6" cy="14" r="3" fill="currentColor" />
-              <circle cx="22" cy="6" r="3" fill="currentColor" />
-              <circle cx="22" cy="22" r="3" fill="currentColor" />
-              <path d="M9 14 L19 6 M9 14 L19 22" stroke="currentColor" strokeWidth="1.6" fill="none" />
-            </svg>
+            <img src={logoMaskot} alt="" />
           </span>
           <div>
             <p className="footer__name">Erlex Foundation</p>

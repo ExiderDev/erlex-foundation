@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { useLenis } from 'lenis/dist/lenis-react'
+import logoMaskot from '../assets/logo/LogoMaskotBiru.webp'
 import '../styles/layout/Navbar.css'
 
 const LINKS = [
@@ -25,11 +26,27 @@ export default function Navbar() {
 
     const onAnchorClick = (e) => {
       const anchor = e.target.closest('a[href^="#"]')
-      if (!anchor || !lenis) return
-      const target = document.getElementById(anchor.getAttribute('href').slice(1))
-      if (!target) return
+      if (!anchor) return
+      const id = anchor.getAttribute('href').slice(1)
+      const target = id === 'top' ? null : document.getElementById(id)
+      if (id !== 'top' && !target) return
       e.preventDefault()
-      lenis.scrollTo(target, { offset: -80, lerp: 0.08 })
+
+      let to = 0
+      if (target) {
+        const heading =
+          target.querySelector(
+            '.section-head, .about__statement, .donation__copy, .founder__content',
+          ) || target
+        const nav = document.querySelector('.nav')
+        const navBottom = nav ? nav.getBoundingClientRect().bottom : 56
+        to = Math.max(
+          0,
+          heading.getBoundingClientRect().top + window.scrollY - navBottom - 16,
+        )
+      }
+      if (lenis) lenis.scrollTo(to, { lerp: 0.08 })
+      else window.scrollTo({ top: to, behavior: 'smooth' })
     }
     document.addEventListener('click', onAnchorClick)
 
@@ -45,17 +62,7 @@ export default function Navbar() {
         <div className="container nav__inner">
         <a href="#top" className="nav__brand">
           <span className="nav__mark" aria-hidden="true">
-            <svg viewBox="0 0 28 28" width="28" height="28">
-              <circle cx="6" cy="14" r="3" fill="currentColor" />
-              <circle cx="22" cy="6" r="3" fill="currentColor" />
-              <circle cx="22" cy="22" r="3" fill="currentColor" />
-              <path
-                d="M9 14 L19 6 M9 14 L19 22"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                fill="none"
-              />
-            </svg>
+            <img src={logoMaskot} alt="" />
           </span>
           Erlex Foundation
         </a>

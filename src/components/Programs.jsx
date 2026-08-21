@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import { motion, useReducedMotion, useScroll, useTransform } from 'motion/react'
-import { Award, Backpack, Laptop } from 'lucide-react'
+import { Award, Backpack, HeartHandshake, Laptop } from 'lucide-react'
 import '../styles/sections/Programs.css'
 
 const PROGRAMS = [
@@ -21,6 +21,12 @@ const PROGRAMS = [
     title: 'Bantuan Laptop',
     body: 'Menyalurkan laptop bagi pelajar dan mahasiswa di sekolah serta kampus untuk mendukung proses belajar.',
     reach: 'Disalurkan ke 20+ sekolah & kampus',
+  },
+  {
+    icon: HeartHandshake,
+    title: 'Bantuan Kemanusiaan',
+    body: 'Bantuan tanggap bagi komunitas terdampak bencana dan kondisi sulit di wilayah 3T.',
+    reach: '10+ titik penyaluran',
   },
 ]
 
@@ -63,10 +69,10 @@ export default function Programs() {
       <div className="programs__sticky">
         <div className="container programs__head" ref={headRef}>
           <p className="eyebrow">Program</p>
-          <h2>Tiga jalur, satu tujuan yang sama.</h2>
+          <h2>Empat jalur, satu tujuan yang sama.</h2>
           <p>
-            Setiap program dirancang untuk saling menopang — dari perlengkapan
-            ke keterampilan, hingga peluang jangka panjang.
+            Setiap program dirancang untuk saling menopang — dari kebutuhan
+            mendasar hingga peluang jangka panjang.
           </p>
         </div>
 

@@ -12,29 +12,29 @@ const STEPS = [
   {
     n: '01',
     title: 'Akses',
-    body: 'Menyalurkan tas dan laptop ke sekolah serta kampus yang paling membutuhkan.',
+    body: 'Menyalurkan tas, alat sekolah, dan kebutuhan belajar ke sekolah serta kampus yang paling membutuhkan.',
   },
   {
     n: '02',
-    title: 'Belajar',
-    body: 'Pendampingan literasi digital dan pelatihan keterampilan yang relevan dengan kebutuhan lokal.',
+    title: 'Ketepatan',
+    body: 'Bantuan dipastikan benar-benar dibutuhkan — disusun bersama sekolah dan komunitas setempat.',
   },
   {
     n: '03',
     title: 'Berdaya',
-    body: 'Peserta mulai memakai keterampilan baru untuk belajar, bekerja, atau membuka usaha kecil.',
+    body: 'Penerima manfaat dapat menjalani sekolah dan kuliah dengan tenang, tanpa terbebani kebutuhan dasar.',
   },
   {
     n: '04',
     title: 'Berbagi',
-    body: 'Peserta terlatih menjadi fasilitator bagi lingkungan sekitar, memperluas dampak tanpa kami hadir langsung.',
+    body: 'Mereka yang pernah terbantu terdorong meringankan beban orang lain di sekitarnya.',
   },
 ]
 
 const STATS = [
   { value: 2300, suffix: '+', label: 'Penerima manfaat' },
   { value: 48, suffix: '', label: 'Sekolah & kampus mitra' },
-  { value: 120, suffix: '+', label: 'Fasilitator lokal terlatih' },
+  { value: 120, suffix: '+', label: 'Relawan aktif' },
   { value: 12, suffix: '', label: 'Provinsi terjangkau' },
 ]
 
@@ -109,9 +109,6 @@ export default function Impact() {
             </div>
           ))}
         </div>
-        <p className="container impact__note">
-          *Data ilustratif untuk keperluan tampilan, akan diperbarui dengan data aktual.
-        </p>
       </motion.div>
     </section>
   )

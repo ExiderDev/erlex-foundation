@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'motion/react'
-import galleryImage from '../assets/image.webp'
+import galleryImage from '../assets/gambar/gambar5.webp'
 import '../styles/sections/Hero.css'
 
 const STATS = [
@@ -91,7 +91,6 @@ const HeroContent = () => {
             </div>
           ))}
         </dl>
-        <p className="hero-content__note">*Data ilustratif, akan diperbarui berkala.</p>
       </div>
     </div>
   )

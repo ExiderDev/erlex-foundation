@@ -5,16 +5,15 @@ import founderPhoto from '../assets/founder.webp'
 import TextReveal from './TextReveal'
 import '../styles/sections/Founder.css'
 
-/* *Data ilustratif — ganti dengan data pendiri asli sebelum live */
 const FOUNDER = {
   name: 'Erwin Alexander',
   role: 'Founder & CEO — PT Filosi Exider Inovasi',
   bio: [
-    'Latar belakang pendiri, perjalanan awal, dan alasan mendirikan Erlex Foundation. Tulis biografi singkat di sini (*data ilustratif).',
-    'Paragraf kedua: visi jangka panjang pendiri untuk pemerataan akses digital di wilayah 3T (*data ilustratif).',
+    'Semuanya berawal pada 2020, saat saya masih duduk di bangku kuliah dan mulai membantu teman-teman mahasiswa yang kesulitan dengan perangkat mereka. Saya tidak pernah menyangka uluran tangan sederhana itu menjadi cikal bakal Filosi. Semangat menolong itu terus tumbuh: pada 2021 kami membentuk tim dan membuka toko fisik Sherfis Tech Computer, sehingga makin banyak orang yang bisa kami layani. Pada 2022 kami mengikuti pelatihan eksternal agar bantuan yang kami berikan semakin baik.',
+    'Tahun 2024 menjadi babak baru: kami melakukan rebranding menjadi PT Filosi Exider Inovasi, menegaskan komitmen untuk terus melayani dan membantu. Ekspansi ke pusat kota pada 2025 memperluas jangkauan layanan, hingga kini kami terus berkembang bersama Erlex Foundation, menyalurkan bantuan dan semangat saling membantu ke seluruh Indonesia.',
   ],
   quote:
-    'Kami tidak membawa teknologi untuk menjadi pahlawan — kami membawanya untuk dipakai, dipelajari, dan diturunkan oleh komunitas itu sendiri. (*kutipan ilustratif)',
+    'Saya memulainya dari satu uluran tangan di bangku kuliah. Dan kami tidak akan berhenti selama masih ada orang yang membutuhkan.',
 }
 
 const reveal = (reduceMotion) => ({
@@ -43,7 +42,7 @@ export default function Founder() {
           </motion.p>
 
           <motion.h2 variants={item} className="founder__heading">
-            <TextReveal text="Sinyal berangkat dari satu orang yang percaya lebih dulu." />
+            <TextReveal text="Berawal dari satu uluran tangan." />
           </motion.h2>
 
           <motion.div variants={item} className="founder__identity">
@@ -61,11 +60,6 @@ export default function Founder() {
             <Quote size={22} strokeWidth={1.6} />
             <p>{FOUNDER.quote}</p>
           </motion.blockquote>
-
-          <motion.p variants={item} className="founder__note">
-            *Data ilustratif — nama, jabatan, biografi, dan kutipan akan diperbarui
-            dengan data aktual.
-          </motion.p>
         </motion.div>
       </div>
     </section>

@@ -2,7 +2,7 @@
   position: relative;
   background: transparent;
   color: var(--ink-500);
-  padding-top: 56px;
+  padding-top: 32px;
 }
 
 .footer__inner {
@@ -11,7 +11,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 28px;
   border-bottom: 1px solid var(--ivory-200);
 }
 
@@ -21,8 +21,10 @@
   gap: 12px;
 }
 
-.footer__mark {
-  color: var(--teal-500);
+.footer__mark img {
+  width: auto;
+  height: 84px;
+  display: block;
 }
 
 .footer__name {
@@ -59,7 +61,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 22px 0 28px;
+  padding: 16px 0 20px;
   font-size: 0.78rem;
   color: var(--ink-500);
 }

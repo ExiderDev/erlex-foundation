@@ -54,12 +54,12 @@
 
 .nav__mark {
   display: inline-flex;
-  color: var(--teal-500);
 }
 
-.nav__mark svg {
-  width: 20px;
-  height: 20px;
+.nav__mark img {
+  width: auto;
+  height: 44px;
+  display: block;
 }
 
 .nav__links {

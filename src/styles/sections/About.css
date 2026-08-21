@@ -1,5 +1,6 @@
 .about {
   background: transparent;
+  padding-bottom: 0;
 }
 
 .about__eyebrow {
@@ -73,6 +74,43 @@
   color: var(--ink-500);
 }
 
+.about__partners {
+  margin-top: clamp(48px, 7vw, 80px);
+  padding-top: clamp(32px, 5vw, 56px);
+  border-top: 1px solid var(--ivory-200);
+}
+
+.about__partners-label {
+  text-align: center;
+  font-size: var(--step-statement);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  margin-bottom: 40px;
+}
+
+.about__partners-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about__partners-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 240px;
+  padding: 24px;
+}
+
+.about__partners-item img {
+  height: 140px;
+  width: auto;
+}
+
 @media (max-width: 900px) {
   .about__statement {
     max-width: none;
@@ -81,6 +119,15 @@
 
 @media (max-width: 700px) {
   .about__pillars {
+    grid-template-columns: 1fr;
+  }
+  .about__partners-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .about__partners-list {
     grid-template-columns: 1fr;
   }
 }
