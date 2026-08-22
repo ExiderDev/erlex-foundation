@@ -5,6 +5,7 @@ import filosilaptop from '../assets/logo/filosilaptop.webp'
 import ifilosi from '../assets/logo/ifilosi.webp'
 import logosi from '../assets/logo/logosi.webp'
 import filosigrup from '../assets/logo/filosigrup.webp'
+import lixir from '../assets/logo/lixir.svg'
 import '../styles/sections/About.css'
 
 const PILLARS = [
@@ -26,10 +27,11 @@ const PILLARS = [
 ]
 
 const PARTNERS = [
+  { name: 'Filosi Grup', img: filosigrup },
   { name: 'Filosi Laptop', img: filosilaptop },
   { name: 'iFilosi', img: ifilosi },
   { name: 'Logosi', img: logosi },
-  { name: 'Filosi Grup', img: filosigrup },
+  { name: 'Lixir', img: lixir },
 ]
 
 export default function About() {
@@ -74,7 +76,7 @@ export default function About() {
           <h2 className="about__partners-label">Mitra Kami</h2>
           <ul className="about__partners-list">
             {PARTNERS.map(({ name, img }) => (
-              <li key={name} className="about__partners-item">
+              <li key={name} className={`about__partners-item${name === 'Lixir' ? ' about__partners-item--lixir' : ''}`}>
                 <img src={img} alt={name} />
               </li>
             ))}

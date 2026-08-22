@@ -1,6 +1,7 @@
 .programs {
   position: relative;
   background: transparent;
+  height: 240vh;
 }
 
 .programs__sticky {
@@ -111,5 +112,24 @@
   }
   .programs__head h2 {
     font-size: var(--step3);
+  }
+}
+
+@media (max-width: 700px) {
+  .programs__sticky {
+    height: auto;
+    min-height: 100dvh;
+    justify-content: flex-start;
+    padding-top: clamp(40px, 8vw, 80px);
+    gap: clamp(16px, 3vw, 28px);
+  }
+
+  .programs__head h2 {
+    font-size: var(--step3);
+  }
+
+  .program-card {
+    width: min(340px, 85vw);
+    padding: 24px 20px;
   }
 }

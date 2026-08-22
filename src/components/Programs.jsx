@@ -64,7 +64,6 @@ export default function Programs() {
       id="program"
       ref={sectionRef}
       className="programs"
-      style={{ height: '240vh' }}
     >
       <div className="programs__sticky">
         <div className="container programs__head" ref={headRef}>

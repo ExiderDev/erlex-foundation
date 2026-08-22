@@ -63,22 +63,6 @@ export default function Contact() {
                 </li>
               ))}
             </ul>
-
-            <div className="contact__map" role="img" aria-label="Placeholder peta lokasi">
-              <svg viewBox="0 0 300 180" className="contact__map-svg">
-                <path
-                  d="M20 130 Q60 60 110 90 T200 60 T280 100"
-                  stroke="var(--teal-500)"
-                  strokeWidth="1.4"
-                  fill="none"
-                  strokeDasharray="4 5"
-                  opacity="0.5"
-                />
-                <circle cx="150" cy="90" r="6" fill="var(--teal-400)" />
-                <circle cx="150" cy="90" r="14" fill="var(--teal-400)" opacity="0.18" />
-              </svg>
-              <span>Peta lokasi akan tampil di sini</span>
-            </div>
           </div>
         </div>
       </div>
